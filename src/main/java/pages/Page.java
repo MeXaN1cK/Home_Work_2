@@ -20,7 +20,7 @@ public interface Page {
                 throw new RuntimeException("Страница" + this.getClass().getSimpleName() + "не загружена");
             }
         } catch (WebDriverException e) {
-            throw new RuntimeExceptionWithScreenshot("Ошибка при загрузки страницы " + this.getClass().getSimpleName() + "\n" + e.toString());
+            throw new RuntimeExceptionWithScreenshot("Ошибка при загрузки страницы " + this.getClass().getSimpleName() + "\n" + e);
         }
     }
 

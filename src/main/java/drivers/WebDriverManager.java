@@ -18,7 +18,7 @@ public class WebDriverManager {
     }
 
     public static void initChrome() {
-        System.setProperty("webdriver.chrome.driver", System.getProperty("CHROME_DRIVER"));
+        System.setProperty("webdriver.chrome.driver", System.getenv("CHROME_DRIVER"));
         ChromeOptions options = new ChromeOptions();
         options.addArguments(List.of("start-maximized", "disable-infobars", "--no-sandbox"));
         try {
